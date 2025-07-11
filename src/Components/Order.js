@@ -1,28 +1,10 @@
 import React, { useState } from "react";
 import "../css/styles-order.css";
 
-function Order() {
-  const [order, setOrder] = useState("pancakes");
+// This component manages a user's favorite order selection using React state.
+// It initializes the order to "pancakes" and dynamically generates buttons for different food items.
+// When a button  is clicked, the state updates with the selected order,
+// and the button receives a "selected" class for styling. The selected order is displayed dynamically.
 
-  return (
-    <div className="order-container">
-      <h1 className="order-heading">Choose Your Favorite Order</h1>
-      <p className="order-selected">
-        My favorite order is <strong>{order}</strong>!
-      </p>
-      <div className="button-container">
-        {["waffles", "pancakes", "bacon", "sausage"].map((item) => (
-          <button
-            key={item}
-            className={`order-button ${order === item ? "selected" : ""}`}
-            onClick={() => setOrder(item)}
-          >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
-
+function Order() {}
 export default Order;
